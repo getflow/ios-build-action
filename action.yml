@@ -98,6 +98,10 @@ inputs:
   ios-app-id:
     description: "The iOS application identifier; useful to sync a specific provisioning profile"
     required: false
+  build-xcargs:
+    description: "Pass additional arguments to xcodebuild for the build phase."
+    required: false
+    default: ""
 runs:
   using: "node16"
   main: "dist/index.js"

@@ -34,6 +34,7 @@ async function run() {
     process.env.FASTLANE_VERSION = core.getInput("fastlane-version");
     process.env.FASTLANE_ENV = core.getInput("fastlane-env");
     process.env.IOS_APP_ID = core.getInput("ios-app-id");
+    process.env.BUILD_XCARGS = core.getInput("build-xcargs");
     await exec.exec(`bash ${__dirname}/../build.sh`);
   } catch (error) {
     core.setFailed(error.message);

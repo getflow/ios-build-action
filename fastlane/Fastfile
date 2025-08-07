@@ -58,7 +58,8 @@ platform :ios do
         provisioningProfiles: {
           "#{ENV['IOS_APP_ID']}" => "match AppStore #{ENV['IOS_APP_ID']}",
         },
-      } : nil
+      } : nil,
+      xcargs: ENV['BUILD_XCARGS'],
     )
 
     if ENV["BROWSERSTACK_UPLOAD"] == 'true'
